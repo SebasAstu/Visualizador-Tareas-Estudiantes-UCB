@@ -1,15 +1,23 @@
 <html>
   <body>
     <h1 id="pagDocente">Docente</h1>
-    <form id="sumar-form">
-      <label for="primer-numero">Primer número:</label>
-      <input type="number" id="primer-numero" />
-      <label for="segundo-numero">Segundo número:</label>
-      <input type="number" id="segundo-numero" />
-      <input type="submit" value="Sumar" id="sumar-button" />
+    <form id="docente-form"> 
+        <select id="nom-materia" >
+            <option value="SisInfoI">SisInfoI</option>
+            <option value="Ingesoft" selected>Ingesoft</option>
+            <option value="Arqui">Arqui</option>
+            <option value="RedesI">RedesI</option>
+            <option value="RedesII">RedesII</option>
+          </select>
+      <label for="">Titulo:</label>
+      <input type="text" id="titulo-tarea">
+      <label for="">Descripcion:</label>
+      <input type="text" id="descripcion-tarea">
+      <input type="date" id="fecha-tarea">
+      <input type="submit" value="Crear" id="crear-button" />
     </form>
-    <div id="resultado-div"></div>
+    <!-- <div id="resultado-div"></div> -->
 
-    <script type="module" src="./src/presenter.js"></script>
+    <script type="module" src="./src/presenterDocente.js"></script>
   </body>
 </html>

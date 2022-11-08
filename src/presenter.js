@@ -1,6 +1,5 @@
 
-const pagDocentes = document.querySelector("#paginaDocentes");
-const pagEstudiantes = document.querySelector("#paginaEstudiantes");
+const form = document.querySelector("#sumar-form");
 
 //pagDocentes.addEventListener("click", (event) => {
 //  event.preventDefault();
