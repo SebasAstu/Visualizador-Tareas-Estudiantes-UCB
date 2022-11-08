@@ -1,6 +1,6 @@
 import Docente from "./docente.js";
 
-describe("Sumar", () => {
+describe("Crear Tarea", () => {
 
     let docente;
     beforeEach(()=> {
