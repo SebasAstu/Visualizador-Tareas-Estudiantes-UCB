@@ -1,16 +1,12 @@
+import Tarea from "./tarea";
 class Docente 
 {
      tareas=[];
+     indice=0;
 
-     crearTarea(materia, titulo,descipcion,fecha)
+     crearTarea(materia, titulo,descipcion,fecha,id)
      {
-        var tarea = new Object();
-
-        tarea.materia= materia;
-        tarea.titulo=titulo;
-        tarea.descipcion=descipcion;
-        tarea.fecha=fecha;
-        
+        let tarea = new Tarea(materia,titulo,descipcion,fecha,id);
         this.tareas.push(tarea);
      }
 }
