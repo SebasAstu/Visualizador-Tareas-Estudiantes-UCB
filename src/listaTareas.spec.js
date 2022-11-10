@@ -17,9 +17,9 @@ describe("manejador tarea", () => {
     it("deberia agregar mas de una tarea", () => {
         const resultado1 = new Tarea("Bda2","Mongo db","llenar base de datos","12-04-2022");
         tareas.agregarTarea(resultado1)
-        const resultado2 = new Tarea("Bda1","Mongo db","llenar base de datos","2022-12-04");
+        const resultado2 = new Tarea("Bda1","Mongo db","llenar base de datos","2022-12-05");
         tareas.agregarTarea(resultado2)
-        expect(tareas.mostrarlista()).toEqual("<br> Fecha:2022-12-04<br> Materia: Bda2 Tarea: Mongo db<br> Fecha:2022-12-04<br> Materia: Bda1 Tarea: Mongo db");
+        expect(tareas.mostrarlista()).toEqual("<br> Fecha:2022-12-04<br> Materia: Bda2 Tarea: Mongo db<br> Fecha:2022-12-05<br> Materia: Bda1 Tarea: Mongo db");
         
       });
 
