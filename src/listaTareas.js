@@ -7,6 +7,8 @@ class Tareas{
     }
     agregarTarea(Tarea){              
         this.listaTareas.push(Tarea);
+        
+        this.listaTareas=this.listaTareas.sort((a, b) => a.fecha - b.fecha);
     }
 
     mostrarlista(){
