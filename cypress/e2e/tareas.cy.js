@@ -8,3 +8,22 @@ describe("cambiar paginas", () => {
     cy.get("#pagEstudiante").should("contain", "Estudiante");
     });
 });
+
+describe("manejador de tareas", () => {
+    it("deberia agregar una tarea", () => {
+    cy.visit('http://127.0.0.1:5500/docente.html');
+    cy.get("#nom-materia").type("SIS-131-ARQUITECTURA DE COMPUTADORAS");
+    cy.get("#nom-tarea").type("prueba tarea");
+    cy.get("#descripcion").type("realiza tu tarea");
+    cy.get("#fech-tarea").type("2022-11-20");
+    
+    cy.get("#tarea-button").click();
+    cy.get("#resultado-div").should("contain", "Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea");
+
+    
+    });
+
+  
+    
+});
+
