@@ -21,6 +21,16 @@
       <input type="Date" id="fech-tarea"/>      
       <input type="submit" value="CrearTarea" id="tarea-button" />
     </form>
+
+    <form id="detalle-form">
+      <label for="nom-tarea">Buscar Tarea:</label>
+      <input type="text" id="buscar-tarea"/>
+      <input type="submit" value="BuscarTarea" id="buscar-button" />
+      <div id="encontrado-div"></div>
+      <input type="submit" value="DetalleTarea" id="detalle-button" />
+    </form>
+
+    <h2>REPORTE</h2>
     <div id="resultado-div"></div>
 
     <script type="module" src="./src/presenter.js"></script>

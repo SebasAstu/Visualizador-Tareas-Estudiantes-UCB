@@ -16,5 +16,15 @@ class Tareas{
         }
         return this.mostrar;
     }
+
+    buscarTarea(titulo){
+        for(let i = 0;i<this.listaTareas.length;i++){
+            if(this.listaTareas[i].titulo==titulo){
+                return this.listaTareas[i];
+            }
+        }
+
+    }
+
 }
 export default Tareas;
