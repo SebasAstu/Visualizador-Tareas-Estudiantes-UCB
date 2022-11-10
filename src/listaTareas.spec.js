@@ -17,9 +17,9 @@ describe("manejador tarea", () => {
     it("deberia agregar mas de una tarea", () => {
         const resultado1 = new Tarea("Bda2","Mongo db","llenar base de datos","12-04-2022");
         tareas.agregarTarea(resultado1)
-        const resultado2 = new Tarea("Bda1","Mongo db","llenar base de datos","12-04-2022");
+        const resultado2 = new Tarea("Bda1","Mongo db","llenar base de datos","2022-12-04");
         tareas.agregarTarea(resultado2)
-        expect(tareas.mostrarlista()).toEqual("<br> Fecha:12-04-2022<br> Materia: Bda2 Tarea: Mongo db<br> Fecha:12-04-2022<br> Materia: Bda1 Tarea: Mongo db");
+        expect(tareas.mostrarlista()).toEqual("<br> Fecha:2022-12-04<br> Materia: Bda2 Tarea: Mongo db<br> Fecha:2022-12-04<br> Materia: Bda1 Tarea: Mongo db");
         
       });
 
@@ -30,7 +30,7 @@ describe("manejador tarea", () => {
         tareas.agregarTarea(resultado2)
         const resultado3 = new Tarea("tallerbda","Mongo db","llenar base de datos","12-04-2022");
         tareas.agregarTarea(resultado3)
-        expect(tareas.mostrarlista()).toEqual("<br> Fecha:12-04-2022<br> Materia: Bda2 Tarea: Mongo db<br> Fecha:12-04-2022<br> Materia: Bda1 Tarea: Mongo db<br> Fecha:12-04-2022<br> Materia: tallerbda Tarea: Mongo db");
+        expect(tareas.mostrarlista()).toEqual("<br> Fecha:2022-12-04<br> Materia: Bda2 Tarea: Mongo db<br> Fecha:2022-12-04<br> Materia: Bda1 Tarea: Mongo db<br> Fecha:2022-12-04<br> Materia: tallerbda Tarea: Mongo db");
         
       });
     
@@ -50,7 +50,17 @@ describe("manejador tarea", () => {
         tareas.agregarTarea(resultado1)
         const busqueda=tareas.buscarTarea("Mongo db");
         const detalle=tareas.mostrarDetalle(busqueda);
-        expect(detalle).toEqual("Materia:Bda2Tarea:Mongo dbDescripcion:llenar base de datosFecha:12-04-2022");
+        expect(detalle).toEqual("Materia:Bda2Tarea:Mongo dbDescripcion:llenar base de datosFecha:2022-12-04");
+      });
+      it("deberia mostrar la lista de tareas en orden", () => {
+        const resultado1 = new Tarea("Bda2","Mongo db","llenar base de datos","2022-04-10");
+        tareas.agregarTarea(resultado1)
+        const resultado2 = new Tarea("Bda1","Mongo db","llenar base de datos","2022-04-15");
+        tareas.agregarTarea(resultado2)
+        const resultado3 = new Tarea("tallerbda","Mongo db","llenar base de datos","2022-04-12");
+        tareas.agregarTarea(resultado3)
+        expect(tareas.mostrarlista()).toEqual("<br> Fecha:2022-04-10<br> Materia: Bda2 Tarea: Mongo db<br> Fecha:2022-04-12<br> Materia: tallerbda Tarea: Mongo db<br> Fecha:2022-04-15<br> Materia: Bda1 Tarea: Mongo db");
+        
       });
 
   });
