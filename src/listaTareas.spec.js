@@ -34,4 +34,23 @@ describe("manejador tarea", () => {
         
       });
     
+      it("deberia buscar una tarea", () => {
+        const resultado1 = new Tarea("Bda2","Mongo db","llenar base de datos","12-04-2022");
+        tareas.agregarTarea(resultado1)
+        const resultado2 = new Tarea("Bda1","relaciones","llenar base de datos","12-04-2022");
+        tareas.agregarTarea(resultado2)
+        const resultado3 = new Tarea("tallerbda","nosql","llenar base de datos","12-04-2022");
+        tareas.agregarTarea(resultado3)
+        const busqueda=tareas.buscarTarea("nosql");
+        expect(busqueda).toEqual(resultado3);
+      });
+
+      it("deberia ver detalle de una tarea", () => {
+        const resultado1 = new Tarea("Bda2","Mongo db","llenar base de datos","12-04-2022");
+        tareas.agregarTarea(resultado1)
+        const busqueda=tareas.buscarTarea("Mongo db");
+        const detalle=tareas.mostrarDetalle(busqueda);
+        expect(detalle).toEqual("Materia:Bda2Tarea:Mongo dbDescripcion:llenar base de datosFecha:12-04-2022");
+      });
+
   });

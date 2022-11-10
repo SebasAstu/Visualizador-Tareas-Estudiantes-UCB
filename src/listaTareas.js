@@ -16,5 +16,19 @@ class Tareas{
         }
         return this.mostrar;
     }
+
+    mostrarDetalle(tarea){
+        const detalle="Materia:"+tarea.materia+"Tarea:"+tarea.titulo+"Descripcion:"+tarea.descripcion+"Fecha:"+tarea.fecha;
+        return detalle;
+    }
+
+    buscarTarea(titulo){
+        for(let i = 0;i<this.listaTareas.length;i++){
+            if(this.listaTareas[i].titulo==titulo){
+                return this.listaTareas[i];
+            }
+        }
+    }
+
 }
 export default Tareas;
