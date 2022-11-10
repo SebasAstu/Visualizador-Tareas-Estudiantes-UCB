@@ -1,12 +1,25 @@
 <html>
   <body>
     <h1 id="pagDocente">Docente</h1>
-    <form id="sumar-form">
-      <label for="primer-numero">Primer número:</label>
-      <input type="number" id="primer-numero" />
-      <label for="segundo-numero">Segundo número:</label>
-      <input type="number" id="segundo-numero" />
-      <input type="submit" value="Sumar" id="sumar-button" />
+    <button><a href="index.html">Home</a></button>
+    <form id="tareas-form">
+      <label for="nom-materia">Materia:</label>
+      <Select id = "nom-materia">
+        <Option value = 'ARQUITECTURA DE COMPUTADORAS'>SIS-131-ARQUITECTURA DE COMPUTADORAS</option>
+        <Option value = 'ARQUITECTURA DE SOFTWARE'>SIS-311-ARQUITECTURA DE SOFTWARE</option>
+        <Option value = 'BASES DE DATOS I'>SIS-122-BASES DE DATOS I</option>
+        <Option value = 'BASES DE DATOS II'>SIS-221-BASES DE DATOS II</option>
+        <Option value = 'ESTRUCTURA DE DATOS'>SIS-211-ESTRUCTURA DE DATOS</option>
+        <Option value = 'INGENIERIA DE SISTEMAS I'>SIS-121-INGENIERIA DE SISTEMAS I</option>
+        <Option value = 'INGENIERIA DE SOFTWARE'>SIS-213-INGENIERIA DE SOFTWARE</option>
+      </Select>            
+      <label for="nom-tarea">Tarea:</label>
+      <input type="text" id="nom-tarea"/>
+      <label for="descripcion">Descripcion: </label>
+      <input type="text" id="descripcion"/>
+      <label for="fech-tarea">Fecha: </label>
+      <input type="Date" id="fech-tarea"/>      
+      <input type="submit" value="CrearTarea" id="tarea-button" />
     </form>
     <div id="resultado-div"></div>
 
