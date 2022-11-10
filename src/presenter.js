@@ -14,6 +14,7 @@ const div = document.querySelector("#resultado-div");
 const divBusqueda= document.querySelector("#encontrado-div");
 
 const btnDetalle=document.querySelector("#detalle-button");
+const btnEliminar=document.querySelector("#eliminar-button");
 const divDet=document.querySelector("#detalle-div");
 
 let lista2 = new Tareas();
@@ -40,4 +41,9 @@ form2.addEventListener("submit", (event) => {
 btnDetalle.addEventListener("click", (event) => {
     event.preventDefault();
     divDet.innerHTML = lista2.mostrarDetalle(tareaDetalle);      
+});
+btnEliminar.addEventListener("click", (event) => {
+    event.preventDefault();
+    lista2.eliminarTarea(buscarNomTarea.value);
+    div.innerHTML = lista2.mostrarlista();
 });

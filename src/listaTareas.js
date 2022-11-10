@@ -30,6 +30,15 @@ class Tareas{
             }
         }
     }
-
+    eliminarTarea(titulo){
+        let nuevaListaTareas = [];
+        for(let i = 0;i<this.listaTareas.length;i++){
+            if(this.listaTareas[i].titulo!=titulo){
+                nuevaListaTareas.push(this.listaTareas[i]);
+            }
+        }
+        this.listaTareas=nuevaListaTareas;
+    }
+    
 }
 export default Tareas;
