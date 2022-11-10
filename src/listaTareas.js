@@ -18,8 +18,7 @@ class Tareas{
     }
 
     mostrarDetalle(tarea){
-        const detalle="Materia:"+tarea.materia+"<br>"+"Tarea:"+tarea.titulo+"<br>"+
-            "Descripcion:"+tarea.detalle+"<br>"+"Fecha:"+tarea.fecha+"<br>";
+        const detalle="Materia:"+tarea.materia+"Tarea:"+tarea.titulo+"Descripcion:"+tarea.descripcion+"Fecha:"+tarea.fecha;
         return detalle;
     }
 
@@ -29,7 +28,6 @@ class Tareas{
                 return this.listaTareas[i];
             }
         }
-
     }
 
 }

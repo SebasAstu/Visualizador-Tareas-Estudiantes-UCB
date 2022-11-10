@@ -50,7 +50,7 @@ describe("manejador tarea", () => {
         tareas.agregarTarea(resultado1)
         const busqueda=tareas.buscarTarea("Mongo db");
         const detalle=tareas.mostrarDetalle(busqueda);
-        expect(detalle).toEqual("Materia:Bda2<br>Tarea:Mongo db<br>Descripcion:undefined<br>Fecha:12-04-2022<br>");
+        expect(detalle).toEqual("Materia:Bda2Tarea:Mongo dbDescripcion:llenar base de datosFecha:12-04-2022");
       });
 
   });

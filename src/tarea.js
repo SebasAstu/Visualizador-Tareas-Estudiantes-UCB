@@ -1,10 +1,10 @@
 class Tarea 
 {     
-   constructor(materia,titulo,descipcion,fecha)
+   constructor(materia,titulo,descripcion,fecha)
    {            
       this.materia= materia;
       this.titulo=titulo;
-      this.descipcion=descipcion;
+      this.descripcion=descripcion;
       this.fecha=fecha;      
    }     
    //getMateria(){

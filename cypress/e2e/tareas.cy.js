@@ -58,4 +58,22 @@ describe("buscador de tareas", () => {
     });   
 });
 
+describe("ver detalles de tareas", () => {
+    it("deberia mostrar el detalle de una tarea", () => {
+    cy.visit('http://127.0.0.1:5500/docente.html');
+    
+    cy.get("#nom-materia").type("SIS-131-ARQUITECTURA DE COMPUTADORAS");
+    cy.get("#nom-tarea").type("tarea 5");
+    cy.get("#descripcion").type("realiza");
+    cy.get("#fech-tarea").type("2022-11-20");
+    cy.get("#tarea-button").click();
+    
+    cy.get("#buscar-tarea").type("tarea 5");
+    cy.get("#buscar-button").click();
+
+    cy.get("#detalle-button").click();
+
+    cy.get("#detalle-div").should("contain","Materia:ARQUITECTURA DE COMPUTADORASTarea:tarea 5Descripcion:realizaFecha:2022-11-20");
+    });   
+});
 

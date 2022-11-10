@@ -13,7 +13,11 @@ const buscarNomTarea=document.querySelector("#buscar-tarea")
 const div = document.querySelector("#resultado-div");
 const divBusqueda= document.querySelector("#encontrado-div");
 
+const btnDetalle=document.querySelector("#detalle-button");
+const divDet=document.querySelector("#detalle-div");
+
 let lista2 = new Tareas();
+let tareaDetalle=new Tarea();
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();      
@@ -31,6 +35,11 @@ form2.addEventListener("submit", (event) => {
     event.preventDefault();      
     const buscarT=buscarNomTarea.value;  
     const tareaEnc=lista2.buscarTarea(buscarT); 
+    tareaDetalle=tareaEnc;
 
     divBusqueda.innerHTML = "<p>"+"Materia: " + tareaEnc.materia    + " Tarea: " + tareaEnc.titulo+ "</p>";
+});
+btnDetalle.addEventListener("click", (event) => {
+    event.preventDefault();      
+    divDet.innerHTML = divDet.innerHTML + lista2.mostrarDetalle(tareaDetalle);
 });
