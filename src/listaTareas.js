@@ -17,6 +17,12 @@ class Tareas{
         return this.mostrar;
     }
 
+    mostrarDetalle(tarea){
+        const detalle="Materia:"+tarea.materia+"<br>"+"Tarea:"+tarea.titulo+"<br>"+
+            "Descripcion:"+tarea.detalle+"<br>"+"Fecha:"+tarea.fecha+"<br>";
+        return detalle;
+    }
+
     buscarTarea(titulo){
         for(let i = 0;i<this.listaTareas.length;i++){
             if(this.listaTareas[i].titulo==titulo){
