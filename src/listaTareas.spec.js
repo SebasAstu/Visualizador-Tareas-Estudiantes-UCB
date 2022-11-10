@@ -43,6 +43,5 @@ describe("manejador tarea", () => {
         tareas.agregarTarea(resultado3)
         const busqueda=tareas.buscarTarea("nosql");
         expect(busqueda).toEqual(resultado3);
-        
       });
   });
