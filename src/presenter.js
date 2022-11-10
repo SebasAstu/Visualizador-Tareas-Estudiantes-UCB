@@ -26,10 +26,8 @@ form.addEventListener("submit", (event) => {
     const descrip = descripcionTarea.value;
     const fech = fechaTarea.value;  
     const tar = new Tarea(nomM,nomT,descrip,fech);
-    const lista = new Tareas();
-    lista.agregarTarea(tar);
-    div.innerHTML = div.innerHTML + lista.mostrarlista();
-    lista2=lista;
+    lista2.agregarTarea(tar);
+    div.innerHTML = lista2.mostrarlista();
 });
 form2.addEventListener("submit", (event) => {
     event.preventDefault();      
