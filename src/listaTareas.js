@@ -10,15 +10,16 @@ class Tareas{
     }
 
     mostrarlista(){
+        let mostrar="";
         for(let i = 0;i<this.listaTareas.length;i++){
-            this.mostrar+= '<br> Fecha:' + this.listaTareas[i].fecha +
+            mostrar+= '<br> Fecha:' + this.listaTareas[i].fecha.toISOString().slice(0, -14) +
             "<br> Materia: " + this.listaTareas[i].materia    + " Tarea: " + this.listaTareas[i].titulo;
         }
-        return this.mostrar;
+        return mostrar;
     }
 
     mostrarDetalle(tarea){
-        const detalle="Materia:"+tarea.materia+"Tarea:"+tarea.titulo+"Descripcion:"+tarea.descripcion+"Fecha:"+tarea.fecha;
+        const detalle="Materia:"+tarea.materia+"Tarea:"+tarea.titulo+"Descripcion:"+tarea.descripcion+"Fecha:"+tarea.fecha.toISOString().slice(0, -14);
         return detalle;
     }
 

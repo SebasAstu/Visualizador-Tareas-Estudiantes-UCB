@@ -5,7 +5,7 @@ class Tarea
       this.materia= materia;
       this.titulo=titulo;
       this.descripcion=descripcion;
-      this.fecha=fecha;      
+      this.fecha=new Date (fecha);    
    }     
    //getMateria(){
    //   return this.materia;

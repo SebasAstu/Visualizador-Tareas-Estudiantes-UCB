@@ -38,6 +38,6 @@ form2.addEventListener("submit", (event) => {
     divBusqueda.innerHTML = "<p>"+"Materia: " + tareaEnc.materia    + " Tarea: " + tareaEnc.titulo+ "</p>";
 });
 btnDetalle.addEventListener("click", (event) => {
-    event.preventDefault();      
-    divDet.innerHTML = divDet.innerHTML + lista2.mostrarDetalle(tareaDetalle);
+    event.preventDefault();
+    divDet.innerHTML = lista2.mostrarDetalle(tareaDetalle);      
 });
