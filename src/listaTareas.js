@@ -13,9 +13,16 @@ class Tareas{
 
     mostrarlista(){
         let mostrar="";
+        let fechaaux="";
         for(let i = 0;i<this.listaTareas.length;i++){
-            mostrar+= '<br> Fecha:' + this.listaTareas[i].fecha.toISOString().slice(0, -14) +
-            "<br> Materia: " + this.listaTareas[i].materia    + " Tarea: " + this.listaTareas[i].titulo;
+            if(fechaaux==this.listaTareas[i].fecha.toISOString().slice(0, -14)){
+                mostrar+= "<br>Materia: " + this.listaTareas[i].materia + "Tarea: " + this.listaTareas[i].titulo;
+            }else{
+                mostrar+= '<br> Fecha:' + this.listaTareas[i].fecha.toISOString().slice(0, -14) +
+                "<br> Materia: " + this.listaTareas[i].materia    + " Tarea: " + this.listaTareas[i].titulo;
+                fechaaux=this.listaTareas[i].fecha.toISOString().slice(0, -14);
+            }
+    
         }
         return mostrar;
     }

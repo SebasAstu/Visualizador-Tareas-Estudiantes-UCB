@@ -76,4 +76,22 @@ describe("ver detalles de tareas", () => {
     cy.get("#detalle-div").should("contain","Materia:ARQUITECTURA DE COMPUTADORASTarea:tarea 5Descripcion:realizaFecha:2022-11-20");
     });   
 });
+describe("agrupar lista por fechas", () => {
+    it("deberia agrupar por fecha", () => {
+        cy.visit('/docente.html');
+        cy.get("#nom-materia").type("SIS-131-ARQUITECTURA DE COMPUTADORAS");
+        cy.get("#nom-tarea").type("prueba tarea");
+        cy.get("#descripcion").type("realiza tu tarea");
+        cy.get("#fech-tarea").type("2022-11-20");
+        cy.get("#tarea-button").click();
 
+        cy.get("#nom-materia").type("SIS-131-ARQUITECTURA DE COMPUTADORAS");
+        cy.get("#nom-tarea").type("prueba tarea");
+        cy.get("#descripcion").type("realiza tu tarea");
+        cy.get("#fech-tarea").type("2022-11-20");
+        cy.get("#tarea-button").click();
+
+        cy.get("#resultado-div").should("contain", "Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea");
+    });
+
+});
