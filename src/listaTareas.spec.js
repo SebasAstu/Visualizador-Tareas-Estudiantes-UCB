@@ -30,7 +30,7 @@ describe("manejador tarea", () => {
         tareas.agregarTarea(resultado2)
         const resultado3 = new Tarea("tallerbda","Mongo db","llenar base de datos","12-04-2022");
         tareas.agregarTarea(resultado3)
-        expect(tareas.mostrarlista()).toEqual("<br> Fecha:2022-12-04<br> Materia: Bda2 Tarea: Mongo db<br>Materia: Bda1Tarea: Mongo db<br>Materia: tallerbdaTarea: Mongo db");
+        expect(tareas.mostrarlista()).toEqual("<br> Fecha:2022-12-04<br> Materia: Bda2 Tarea: Mongo db<br> Materia: Bda1 Tarea: Mongo db<br> Materia: tallerbda Tarea: Mongo db");
         
       });
     
@@ -92,6 +92,6 @@ describe("manejador tarea", () => {
         tareas.agregarTarea(resultado2)
         const resultado3 = new Tarea("tallerbda","Mongo db","llenar base de datos","2022-04-15");
         tareas.agregarTarea(resultado3)
-        expect(tareas.mostrarlista()).toEqual("<br> Fecha:2022-04-15<br> Materia: Bda2 Tarea: Mongo db<br>Materia: Bda1Tarea: Mongo db<br>Materia: tallerbdaTarea: Mongo db");
+        expect(tareas.mostrarlista()).toEqual("<br> Fecha:2022-04-15<br> Materia: Bda2 Tarea: Mongo db<br> Materia: Bda1 Tarea: Mongo db<br> Materia: tallerbda Tarea: Mongo db");
       })
   });

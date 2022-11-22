@@ -16,7 +16,7 @@ class Tareas{
         let fechaaux="";
         for(let i = 0;i<this.listaTareas.length;i++){
             if(fechaaux==this.listaTareas[i].fecha.toISOString().slice(0, -14)){
-                mostrar+= "<br>Materia: " + this.listaTareas[i].materia + "Tarea: " + this.listaTareas[i].titulo;
+                mostrar+= "<br> Materia: " + this.listaTareas[i].materia + " Tarea: " + this.listaTareas[i].titulo;
             }else{
                 mostrar+= '<br> Fecha:' + this.listaTareas[i].fecha.toISOString().slice(0, -14) +
                 "<br> Materia: " + this.listaTareas[i].materia    + " Tarea: " + this.listaTareas[i].titulo;

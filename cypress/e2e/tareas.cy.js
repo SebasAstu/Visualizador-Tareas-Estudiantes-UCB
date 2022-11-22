@@ -32,12 +32,16 @@ describe("manejador de tareas", () => {
         cy.get("#tarea-button").click();
 
         cy.get("#nom-materia").type("SIS-131-ARQUITECTURA DE COMPUTADORAS");
-        cy.get("#nom-tarea").type("prueba tarea");
-        cy.get("#descripcion").type("realiza tu tarea");
+        cy.get("#nom-tarea").clear().type("prueba tarea");
+        cy.get("#descripcion").clear().type("realiza tu tarea");
         cy.get("#fech-tarea").type("2022-11-20");
         cy.get("#tarea-button").click();
 
-        cy.get("#resultado-div").should("contain", "Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea");
+        cy.get("#resultado-div").each(($ele) => {
+            cy.log($ele.text());
+         });
+         //Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea
+         cy.get("#resultado-div").should("contain", "Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea");
     });
 });
 
@@ -86,12 +90,16 @@ describe("agrupar lista por fechas", () => {
         cy.get("#tarea-button").click();
 
         cy.get("#nom-materia").type("SIS-131-ARQUITECTURA DE COMPUTADORAS");
-        cy.get("#nom-tarea").type("prueba tarea");
-        cy.get("#descripcion").type("realiza tu tarea");
-        cy.get("#fech-tarea").type("2022-11-20");
+        cy.get("#nom-tarea").clear().type("prueba tarea");
+        cy.get("#descripcion").clear().type("realiza tu tarea");
+        cy.get("#fech-tarea").type("2022-11-21");
         cy.get("#tarea-button").click();
 
-        cy.get("#resultado-div").should("contain", "Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea");
+        cy.get("#resultado-div").each(($ele) => {
+            cy.log($ele.text());
+         });
+         //Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea Fecha:2022-11-21 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea
+        cy.get("#resultado-div").should("contain", "Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea Fecha:2022-11-21 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea");
     });
 
 });
