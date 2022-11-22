@@ -1,4 +1,5 @@
 import Tarea from './tarea.js'
+import estudiantes from './estudiantes.json'
 
 class Tareas{
     mostrar="";
@@ -14,15 +15,23 @@ class Tareas{
     mostrarlista(){
         let mostrar="";
         let fechaaux="";
+        let conta=0;
         for(let i = 0;i<this.listaTareas.length;i++){
+            for(let j=0;j<estudiantes.estudiantes.length;j++){
+              for(let x=0;x<estudiantes.estudiantes[j].materia.length;x++){
+                if(this.listaTareas[i].materia == estudiantes.estudiantes[j].materia[x]){
+                  conta++;
+                }
+              }                
+            }
             if(fechaaux==this.listaTareas[i].fecha.toISOString().slice(0, -14)){
-                mostrar+= "<br> Materia: " + this.listaTareas[i].materia + " Tarea: " + this.listaTareas[i].titulo;
+                mostrar+= "<br> Materia: " + this.listaTareas[i].materia + " Tarea: " + this.listaTareas[i].titulo +"("+ conta +")";
             }else{
                 mostrar+= '<br> Fecha:' + this.listaTareas[i].fecha.toISOString().slice(0, -14) +
-                "<br> Materia: " + this.listaTareas[i].materia    + " Tarea: " + this.listaTareas[i].titulo;
+                "<br> Materia: " + this.listaTareas[i].materia    + " Tarea: " + this.listaTareas[i].titulo +"("+ conta +")";
                 fechaaux=this.listaTareas[i].fecha.toISOString().slice(0, -14);
             }
-    
+            conta=0;
         }
         return mostrar;
     }
@@ -48,6 +57,6 @@ class Tareas{
         }
         this.listaTareas=nuevaListaTareas;
     }
-    
+
 }
 export default Tareas;

@@ -39,9 +39,11 @@ describe("manejador de tareas", () => {
 
         cy.get("#resultado-div").each(($ele) => {
             cy.log($ele.text());
-         });
-         //Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea
-         cy.get("#resultado-div").should("contain", "Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea");
+        });
+        //Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea
+        //Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea ------------- (6) Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea ------------- (6)
+        cy.get("#resultado-div").should("contain", "Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea(15) Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea(15)");
+         
     });
 });
 
@@ -98,8 +100,8 @@ describe("agrupar lista por fechas", () => {
         cy.get("#resultado-div").each(($ele) => {
             cy.log($ele.text());
          });
-         //Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea Fecha:2022-11-21 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea
-        cy.get("#resultado-div").should("contain", "Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea Fecha:2022-11-21 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea");
-    });
-
+        //Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea Fecha:2022-11-21 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea
+        //Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea ------------- (6) Fecha:2022-11-21 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea ------------- (6)
+        cy.get("#resultado-div").should("contain", "Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea(15) Fecha:2022-11-21 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea(15)");
+    }); 
 });
