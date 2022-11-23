@@ -28,7 +28,7 @@ describe("manejador de tareas", () => {
         });
         //Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea
         //Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea ------------- (6) Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea ------------- (6)
-        cy.get("#resultado-div").should("contain", "Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea(15) Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea(15)");
+        cy.get("#resultado-div").should("contain", "Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea(15) Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea(15) Estudiantes con 2 tarea: 15");
          
     });
 });
@@ -88,6 +88,6 @@ describe("agrupar lista por fechas", () => {
          });
         //Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea Fecha:2022-11-21 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea
         //Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea ------------- (6) Fecha:2022-11-21 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea ------------- (6)
-        cy.get("#resultado-div").should("contain", "Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea(15) Fecha:2022-11-21 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea(15)");
+        cy.get("#resultado-div").should("contain", "Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea(15) Estudiantes con 1 tarea: 15 Fecha:2022-11-21 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea(15) Estudiantes con 1 tarea: 15");
     }); 
 });
