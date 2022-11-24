@@ -125,7 +125,7 @@ class Tareas{
     }
 
     mostrarDetalle(tarea){
-        const detalle="Materia:"+tarea.materia+"Tarea:"+tarea.titulo+"Descripcion:"+tarea.descripcion+"Fecha:"+tarea.fecha.toISOString().slice(0, -14);
+        const detalle="<br>Materia:"+tarea.materia+"<br>Tarea:"+tarea.titulo+"<br>Descripcion:"+tarea.descripcion+"<br>Fecha:"+tarea.fecha.toISOString().slice(0, -14)+"<br>Tiempo Estimado(dias):"+tarea.tiempoEstimado;
         return detalle;
     }
 

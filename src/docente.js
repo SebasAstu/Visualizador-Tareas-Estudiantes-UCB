@@ -2,7 +2,7 @@ class Docente
 {
      tareas=[];
 
-     crearTarea(materia, titulo,descipcion,fecha)
+     crearTarea(materia, titulo,descipcion,fecha,tiempoEstimado)
      {
         var tarea = new Object();
 
@@ -10,6 +10,7 @@ class Docente
         tarea.titulo=titulo;
         tarea.descipcion=descipcion;
         tarea.fecha=fecha;
+        tarea.tiempoEstimado=tiempoEstimado;
         
         this.tareas.push(tarea);
      }
