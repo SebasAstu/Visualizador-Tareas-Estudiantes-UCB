@@ -16,12 +16,14 @@ describe("manejador de tareas", () => {
         cy.get("#nom-tarea").type("prueba tarea");
         cy.get("#descripcion").type("realiza tu tarea");
         cy.get("#fech-tarea").type("2022-11-20");
+        cy.get("#tiempoEstimado").type(2);
         cy.get("#tarea-button").click();
 
         cy.get("#nom-materia").type("SIS-131-ARQUITECTURA DE COMPUTADORAS");
         cy.get("#nom-tarea").clear().type("prueba tarea");
         cy.get("#descripcion").clear().type("realiza tu tarea");
         cy.get("#fech-tarea").type("2022-11-20");
+        cy.get("#tiempoEstimado").type(2);
         cy.get("#tarea-button").click();
         cy.get("#resultado-div").each(($ele) => {
             cy.log($ele.text());
@@ -41,6 +43,7 @@ describe("buscador de tareas", () => {
     cy.get("#nom-tarea").type("tarea 5");
     cy.get("#descripcion").type("realiza tu tarea");
     cy.get("#fech-tarea").type("2022-11-20");
+    cy.get("#tiempoEstimado").type(2);
     cy.get("#tarea-button").click();
     
     cy.get("#buscar-tarea").type("tarea 5");
@@ -50,24 +53,28 @@ describe("buscador de tareas", () => {
     });   
 });
 
-//describe("ver detalles de tareas", () => {
-  //  it("deberia mostrar el detalle de una tarea", () => {
-    //cy.visit('/docente.html');
+describe("ver detalles de tareas", () => {
+    it("deberia mostrar el detalle de una tarea", () => {
+    cy.visit('/docente.html');
     
-    //cy.get("#nom-materia").type("SIS-131-ARQUITECTURA DE COMPUTADORAS");
-    //cy.get("#nom-tarea").type("tarea 5");
-    //cy.get("#descripcion").type("realiza");
-    //cy.get("#fech-tarea").type("2022-11-20");
-    //cy.get("#tarea-button").click();
+    cy.get("#nom-materia").type("SIS-131-ARQUITECTURA DE COMPUTADORAS");
+    cy.get("#nom-tarea").type("tarea 5");
+    cy.get("#descripcion").type("realiza");
+    cy.get("#fech-tarea").type("2022-11-20");
+    cy.get("#tiempoEstimado").type(2);
+    cy.get("#tarea-button").click();
     
-    //cy.get("#buscar-tarea").type("tarea 5");
-    //cy.get("#buscar-button").click();
+    cy.get("#buscar-tarea").type("tarea 5");
+    cy.get("#buscar-button").click();
 
-    //cy.get("#detalle-button").click();
-
-    //cy.get("#detalle-div").should("contain","Materia:ARQUITECTURA DE COMPUTADORASTarea:tarea 5Descripcion:realizaFecha:2022-11-20");
-    //});   
-//});
+    cy.get("#detalle-button").click();
+    cy.get("#detalle-div").each(($ele) => {
+        cy.log($ele.text());
+     }); 
+    cy.get("#detalle-div").should("contain","Materia:ARQUITECTURA DE COMPUTADORASTarea:tarea 5Descripcion:realizaFecha:2022-11-20Tiempo Estimado(dias):2");
+    });
+      
+});
 describe("agrupar lista por fechas", () => {
     it("deberia agrupar por fecha", () => {
         cy.visit('/docente.html');
@@ -75,12 +82,14 @@ describe("agrupar lista por fechas", () => {
         cy.get("#nom-tarea").type("prueba tarea");
         cy.get("#descripcion").type("realiza tu tarea");
         cy.get("#fech-tarea").type("2022-11-20");
+        cy.get("#tiempoEstimado").type(2);
         cy.get("#tarea-button").click();
 
         cy.get("#nom-materia").type("SIS-131-ARQUITECTURA DE COMPUTADORAS");
         cy.get("#nom-tarea").clear().type("prueba tarea");
         cy.get("#descripcion").clear().type("realiza tu tarea");
         cy.get("#fech-tarea").type("2022-11-21");
+        cy.get("#tiempoEstimado").type(2);
         cy.get("#tarea-button").click();
 
         cy.get("#resultado-div").each(($ele) => {
