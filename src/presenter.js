@@ -10,6 +10,7 @@ const descripcionTarea = document.querySelector("#descripcion");
 const fechaTarea = document.querySelector("#fech-tarea");
 const tiempoEstimado = document.querySelector("#tiempoEstimado");
 const buscarNomTarea=document.querySelector("#buscar-tarea")
+const nomEtiqueta=document.querySelector("#nom-etiqueta");
 
 const div = document.querySelector("#resultado-div");
 const divBusqueda= document.querySelector("#encontrado-div");
@@ -28,7 +29,9 @@ form.addEventListener("submit", (event) => {
     const descrip = descripcionTarea.value;
     const fech = fechaTarea.value;  
     const tiempoE =  tiempoEstimado.value;
-    const tar = new Tarea(nomM,nomT,descrip,fech,tiempoE);
+    const etiqueta= nomEtiqueta.value;
+    const tar = new Tarea(nomM,nomT,descrip,fech,tiempoE,etiqueta);
+    
     lista2.agregarTarea(tar);
     div.innerHTML = lista2.mostrarlista();
 });

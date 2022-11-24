@@ -49,7 +49,7 @@ describe("manejador tarea", () => {
         tareas.agregarTarea(resultado1)
         const busqueda=tareas.buscarTarea("Mongo db");
         const detalle=tareas.mostrarDetalle(busqueda);
-        expect(detalle).toEqual("<br>Materia:BASES DE DATOS II<br>Tarea:Mongo db<br>Descripcion:llenar base de datos<br>Fecha:2022-12-04<br>Tiempo Estimado(dias):5");
+        expect(detalle).toEqual("<br>Materia:BASES DE DATOS II<br>Tarea:Mongo db<br>Descripcion:llenar base de datos<br>Fecha:2022-12-04<br>Tiempo Estimado(dias):5<br>Etiqueta:undefined");
       });
       it("deberia mostrar la lista de tareas en orden", () => {
         const resultado1 = new Tarea("BASES DE DATOS II","Mongo db","llenar base de datos","2022-04-10");
