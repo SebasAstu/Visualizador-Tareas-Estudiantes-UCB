@@ -28,7 +28,7 @@ describe("manejador de tareas", () => {
         });
         //Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea
         //Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea ------------- (6) Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea ------------- (6)
-        cy.get("#resultado-div").should("contain", "Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea(15) Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea(15) Estudiantes con 2 tarea: 15");
+        cy.get("#resultado-div").should("contain", "FECHA:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea(15) Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea(15)>Estudiantes con 2 tarea: 15--->Jonathan: [prueba tarea] [prueba tarea]--->Martha: [prueba tarea] [prueba tarea]--->Pamela: [prueba tarea] [prueba tarea]--->Alberto: [prueba tarea] [prueba tarea]--->Monica: [prueba tarea] [prueba tarea]--->Pedro: [prueba tarea] [prueba tarea]--->Sandra: [prueba tarea] [prueba tarea]--->Maria: [prueba tarea] [prueba tarea]--->Alan: [prueba tarea] [prueba tarea]--->Mariana: [prueba tarea] [prueba tarea]--->Lucas: [prueba tarea] [prueba tarea]--->Sandro: [prueba tarea] [prueba tarea]--->Eliana: [prueba tarea] [prueba tarea]--->Pedro: [prueba tarea] [prueba tarea]--->Joaquin: [prueba tarea] [prueba tarea]");
          
     });
 });
@@ -88,6 +88,6 @@ describe("agrupar lista por fechas", () => {
          });
         //Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea Fecha:2022-11-21 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea
         //Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea ------------- (6) Fecha:2022-11-21 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea ------------- (6)
-        cy.get("#resultado-div").should("contain", "Fecha:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea(15) Estudiantes con 1 tarea: 15 Fecha:2022-11-21 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea(15) Estudiantes con 1 tarea: 15");
+        cy.get("#resultado-div").should("contain", "FECHA:2022-11-20 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea(15)>Estudiantes con 1 tarea: 15--->Jonathan: [prueba tarea]--->Martha: [prueba tarea]--->Pamela: [prueba tarea]--->Alberto: [prueba tarea]--->Monica: [prueba tarea]--->Pedro: [prueba tarea]--->Sandra: [prueba tarea]--->Maria: [prueba tarea]--->Alan: [prueba tarea]--->Mariana: [prueba tarea]--->Lucas: [prueba tarea]--->Sandro: [prueba tarea]--->Eliana: [prueba tarea]--->Pedro: [prueba tarea]--->Joaquin: [prueba tarea]FECHA:2022-11-21 Materia: ARQUITECTURA DE COMPUTADORAS Tarea: prueba tarea(15)>Estudiantes con 1 tarea: 15--->Jonathan: [prueba tarea]--->Martha: [prueba tarea]--->Pamela: [prueba tarea]--->Alberto: [prueba tarea]--->Monica: [prueba tarea]--->Pedro: [prueba tarea]--->Sandra: [prueba tarea]--->Maria: [prueba tarea]--->Alan: [prueba tarea]--->Mariana: [prueba tarea]--->Lucas: [prueba tarea]--->Sandro: [prueba tarea]--->Eliana: [prueba tarea]--->Pedro: [prueba tarea]--->Joaquin: [prueba tarea]");
     }); 
 });
